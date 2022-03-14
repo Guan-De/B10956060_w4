@@ -24,6 +24,7 @@ namespace B10956060_w4
                 }
             }
             */
+            /*
             Console.Write("請輸入一個整數：");
             string user = Console.ReadLine();
             int num = Convert.ToInt32(user);
@@ -51,6 +52,35 @@ namespace B10956060_w4
                 }
                 Console.WriteLine("");
             }
+            */
+
+            string[,] StuScore = new string[5, 5] { { "1", "Jack", "80", "75", "60" },
+                { "2", "Mary", "65", "67", "62" },
+                { "3", "Tom", "100", "93", "91" },
+                { "4", "Grace", "98", "25", "50" },
+                { "5", "Alice", "83", "82", "87" }
+            };
+
+            Console.Write("請輸入座號(1-5)：");
+            string user = Console.ReadLine();
+            int num = Convert.ToInt32(user);
+            if (num >= 1 && num <= 5)
+            {
+                string name = StuScore[num - 1, 1];
+                string cp = StuScore[num - 1, 2];
+                string pr = StuScore[num - 1, 3];
+                string ani = StuScore[num - 1, 4];
+
+                Console.WriteLine("1.姓    名：" + name);
+                Console.WriteLine("2.電腦概論：" + cp);
+                Console.WriteLine("3.程式設計：" + pr);
+                Console.WriteLine("4.動畫設計：" + ani);
+            }
+            else
+            {
+                Console.WriteLine("座號超出範圍");
+            }
         }
     }
 }
+
